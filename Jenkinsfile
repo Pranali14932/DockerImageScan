@@ -17,7 +17,7 @@ pipeline {
 
         registry = "omjai1010/docker-scan" 
 
-        registryCredential = 'dockerHub' 
+        registryCredential = 'DockerHub' 
         dockerImage = '' 
 
     }
