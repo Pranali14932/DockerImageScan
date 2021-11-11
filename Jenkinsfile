@@ -39,7 +39,7 @@ pipeline {
             steps { 
                 script { 
                       sh '''
-                    docker run -d httpd -name dockerImage 
+                    docker run -d  --name dockerImage 
                     '''
                     }
                 } 
