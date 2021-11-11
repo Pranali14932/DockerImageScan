@@ -38,7 +38,9 @@ pipeline {
          stage('Run Image') { 
             steps { 
                 script { 
+                      sh '''
                     docker run -d httpd -name dockerImage 
+                    '''
                     }
                 } 
             }
