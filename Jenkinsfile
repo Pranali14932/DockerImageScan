@@ -53,6 +53,17 @@ pipeline {
                 }     
           }
 
+          stage('Run Docker image') { 
+
+            steps { 
+
+                script { 
+
+                   docker run -d httpd -name dockerImage
+
+                } 
+
+            }
         stage('Deploy our image') { 
 
             steps { 
