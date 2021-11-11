@@ -25,14 +25,7 @@ pipeline {
                       }
                 }     
           } 
-          stage('Runur image') { 
-            steps { 
-                script { 
-                    docker run -d httpd -name dockerImage 
-                    }
-                } 
-            }
-         
+                  
         stage('Deploy our image') { 
             steps { 
                 script { 
@@ -41,7 +34,14 @@ pipeline {
                     }
                 } 
             }
-        } 
+        }
+         stage('Run Image') { 
+            steps { 
+                script { 
+                    docker run -d httpd -name dockerImage 
+                    }
+                } 
+            }
         stage('Cleaning up') { 
             steps { 
                 sh "docker rmi $registry:$BUILD_NUMBER" 
