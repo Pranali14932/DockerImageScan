@@ -24,7 +24,6 @@ for(int i=0;;i++)
   t1.start(); 
  
   
-  System.out.println("Main thread ending"); 
  }
 }
 // public class Hello {  
