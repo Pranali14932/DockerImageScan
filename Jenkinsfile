@@ -39,7 +39,7 @@ pipeline {
             steps { 
                 script { 
                       sh '''
-                    docker run -d dockerImage  node:latest
+                    docker run --name dockerImage  node:latest
                     '''
                     }
                 } 
