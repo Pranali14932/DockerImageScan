@@ -9,23 +9,23 @@
 // }
 
 
-public class Hello implements Runnable
-{
-public void run()
-{  
-  System.out.println(Thread.currentThread() + " is a daemon thread");  
-}  
-public static void main(String[] args) 
-{
-Hello obj = new Hello();
-Thread t1 = new Thread(obj, "Thread 1");
- t1.setDaemon(true); 
-for(int i=0;;i++)
-  t1.start(); 
+// public class Hello implements Runnable
+// {
+// public void run()
+// {  
+//   System.out.println(Thread.currentThread() + " is a daemon thread");  
+// }  
+// public static void main(String[] args) 
+// {
+// Hello obj = new Hello();
+// Thread t1 = new Thread(obj, "Thread 1");
+//  t1.setDaemon(true); 
+// for(int i=0;;i++)
+//   t1.start(); 
  
   
- }
-}
+//  }
+// }
 // public class Hello {  
 	
 // 	 public static void main(String[] args){  
@@ -37,3 +37,23 @@ for(int i=0;;i++)
 	 
 // 	 }  
 // 	}  
+
+
+public class Hello {
+	public int add(int a,int b){
+		return a+b;
+		}
+		 
+		public int subtract(int a,int b){
+		return a-b;
+		}
+		
+	public static void main(String []args)
+	{
+		Hello m=new Hello();
+		for(int i=0;;i++) {
+			System.out.println(m.add(i, i));
+			System.out.println(m.subtract(i,i-1));
+		}
+	}
+}
