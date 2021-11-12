@@ -35,15 +35,15 @@ pipeline {
                 } 
             }
         }
-        stage('Run Image') { 
-            steps { 
-                script { 
-                      sh '''
-                  docker run -d dockerImage
-                    '''
-                    }
-                } 
-            }
+//         stage('Run Image') { 
+//             steps { 
+//                 script { 
+//                       sh '''
+//                   docker run -d dockerImage
+//                     '''
+//                     }
+//                 } 
+//             }
 //         stage('Cleaning up') { 
 //             steps { 
 //                 sh "docker rmi $registry:$BUILD_NUMBER" 
